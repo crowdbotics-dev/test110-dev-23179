@@ -21,6 +21,24 @@ function api_v1_customtext_partial_update(payload) {
 function api_v1_customtext_delete(payload) {
   return testAPI.delete(`/api/v1/customtext/${payload.id}/`)
 }
+function api_v1_demo_list(payload) {
+  return testAPI.get(`/api/v1/demo/`)
+}
+function api_v1_demo_create(payload) {
+  return testAPI.post(`/api/v1/demo/`, payload.data)
+}
+function api_v1_demo_read(payload) {
+  return testAPI.get(`/api/v1/demo/${payload.id}/`)
+}
+function api_v1_demo_update(payload) {
+  return testAPI.put(`/api/v1/demo/${payload.id}/`, payload.data)
+}
+function api_v1_demo_partial_update(payload) {
+  return testAPI.patch(`/api/v1/demo/${payload.id}/`, payload.data)
+}
+function api_v1_demo_delete(payload) {
+  return testAPI.delete(`/api/v1/demo/${payload.id}/`)
+}
 function api_v1_homepage_list(payload) {
   return testAPI.get(`/api/v1/homepage/`)
 }
@@ -44,6 +62,24 @@ function api_v1_login_create(payload) {
 }
 function api_v1_signup_create(payload) {
   return testAPI.post(`/api/v1/signup/`, payload.data)
+}
+function api_v1_test_list(payload) {
+  return testAPI.get(`/api/v1/test/`)
+}
+function api_v1_test_create(payload) {
+  return testAPI.post(`/api/v1/test/`, payload.data)
+}
+function api_v1_test_read(payload) {
+  return testAPI.get(`/api/v1/test/${payload.id}/`)
+}
+function api_v1_test_update(payload) {
+  return testAPI.put(`/api/v1/test/${payload.id}/`, payload.data)
+}
+function api_v1_test_partial_update(payload) {
+  return testAPI.patch(`/api/v1/test/${payload.id}/`, payload.data)
+}
+function api_v1_test_delete(payload) {
+  return testAPI.delete(`/api/v1/test/${payload.id}/`)
 }
 function rest_auth_login_create(payload) {
   return testAPI.post(`/rest-auth/login/`, payload.data)
@@ -85,6 +121,12 @@ export const apiService = {
   api_v1_customtext_update,
   api_v1_customtext_partial_update,
   api_v1_customtext_delete,
+  api_v1_demo_list,
+  api_v1_demo_create,
+  api_v1_demo_read,
+  api_v1_demo_update,
+  api_v1_demo_partial_update,
+  api_v1_demo_delete,
   api_v1_homepage_list,
   api_v1_homepage_create,
   api_v1_homepage_read,
@@ -93,6 +135,12 @@ export const apiService = {
   api_v1_homepage_delete,
   api_v1_login_create,
   api_v1_signup_create,
+  api_v1_test_list,
+  api_v1_test_create,
+  api_v1_test_read,
+  api_v1_test_update,
+  api_v1_test_partial_update,
+  api_v1_test_delete,
   rest_auth_login_create,
   rest_auth_logout_list,
   rest_auth_logout_create,
